@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "o4VAG72OHoQw8y1Wtpvwa55jT5xFuEBiJSsfB3xKWVw=",
+  "Hash": "gQd53K5M3miBrrCyp8BxAcjcHXR+4l4WOnivQPG/hEk=",
   "Source": "Apilogin",
   "BasePath": "_content/Apilogin",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

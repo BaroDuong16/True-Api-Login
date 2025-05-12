@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Apilogin")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2b383a3efa64ee4176491aae32e845652ce3e77")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ab66826d3caa4787f6d0f55d765a8d997c96405")]
 [assembly: System.Reflection.AssemblyProductAttribute("Apilogin")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Apilogin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

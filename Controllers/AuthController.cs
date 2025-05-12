@@ -1,6 +1,7 @@
 using Apilogin.Dtos;
 using Apilogin.Models;
 using Apilogin.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LoginRegisterApi.Controllers
@@ -25,25 +26,33 @@ namespace LoginRegisterApi.Controllers
                 return BadRequest("User already exists");
             }
 
-            return Ok(new { Message = "User registered successfully" });
+            return Ok(new { 
+                Message = "User registered successfully"
+                 
+                 });
         }
 
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginDto loginDto)
         {
-            var user = _authService.Login(loginDto);
-            if (user == null)
+            var token = _authService.Login(loginDto);
+            if (token == null)
             {
                 return Unauthorized("Invalid username or password");
             }
 
-            return Ok(new { Message = "Login successful" });
+            return Ok(new
+            {
+                Message = "Login successful",
+                Token = token
+            });
         }
 
+        [Authorize]
         [HttpPost("logout")]
         public IActionResult Logout()
         {
-            _authService.Logout();
+            _authService.Logout(); // No-op in stateless JWT
             return Ok(new { Message = "Logout successful" });
         }
     }
